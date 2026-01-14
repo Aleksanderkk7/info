@@ -5,6 +5,8 @@
     <style>
         body {
             background-color: #cccccc;
+            display: flex;
+            flex-wrap: wrap;
         }
 
         article {
@@ -12,6 +14,16 @@
             height: 200px;
             margin: 5px;
             background-color: #eaeaed;
+            overflow: scroll;
+            text-align: center;
+            
+
+        }
+        article:nth-child(even) {
+            flex-grow: 1;
+        }
+        article:nth-child(odd) {
+            flex-grow: 2;
         }
 
     </style>
