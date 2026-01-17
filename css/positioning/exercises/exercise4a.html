@@ -1,3 +1,9 @@
+<!-- Bruk en flexbox for å sørge for at bildet og beskrivelsen vises ved siden av hverandre på store skjermer,
+ og under hverandre på mindre skjermer.
+Bruk en egen flexbox for selve description‑delen. Når beskrivelsen vises ved siden av bildet,
+skal overskriften og avsnittene fordeles utover (spre seg). -->
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,9 +13,25 @@
             width: 300px;
         }
         article {
-            margin:50px;
-            padding:10px;
-            border: 2px solid black;
+            margin:50px;    /* Avstanden utenfor et element, luftrommet mellom elemtet og andre elementer rudnt,
+                            får en avstand til det rundt den*/
+                            /* Luft/avstand utenfor et element avstanden mellom den boksen du jobber med og andre ting rundt den */
+
+            padding:10px;       /* Avstand inni elemtet, altså mellom innholdet og kanten til elementet */
+                                /* Luft/avstand inni et element mellom innholdet og kanten rundt */
+
+            border: 2px solid black;  /* Kanten rundt elementet */
+            display: flex;              /* Flexbox: når det brukes legges ting seg vanligvis på en linje */
+            flex-wrap: wrap;            /* flex-wrap bestemmer om: ting skal bli på en linje eller,
+                                        om ting skal gå ned på neste linje når det ikke er plass */
+            justify-content: space-between; /* Brukes når man har en flexbox,
+            justify-content forteller hvordan elemente skal plasseres bortover på linjen */
+        }
+
+        .description { /* Gjør descroption om til en flexbox, og innholdet inni blir konmtrollert av flex-regler */
+            display: flex; /* Gjør denne bokse smart slik at ting inni kan plasseres lettere */
+            flex-direction: column; /* Dette legger elementene under hverandre, som en kollone */
+            justify-content: space-between; /* Siden det brukes column, så jobber justify-content vertikalt og ikke horisontalt */
         }
         
     </style>

@@ -1,3 +1,10 @@
+<!-- Startfil
+
+Sentrer inner‑diven inni box‑diven, både vertikalt og horisontalt.
+Bruk text-align‑egenskapen for å sentrere teksten også.
+
+!Exercise3 -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,20 +12,24 @@
     <title>Exercise 3a: Centering</title>
     <style>
         * {
-            margin: 0;
+            margin: 0;              /* Fjerner standard mellomrom rundt alle HTML-elemter */
+            text-align: center;     /* Tekst Innhold blir sentrert horisontalt */
         }
         .box {
-            background: #2db34a;
-            margin: 5px;
-            height: 125px;
+            background: #2db34a;      /* Setter bakgrunnen i selve boksen til å være grønn*/
+            margin: 5px;                /* Dette gir 5 pixel pusterom rundt boksen */
+            height: 125px;              /* Setter høyden til selve boksen aka: sørelsen på boksen */
+            display: flex;              /* Gjør boksen til en flex-container. "Flex" gjør at det blir til et smart system, gjør tin superlett!! */
+            justify-content: center;    /* Begrunner inholde, i dette tilfelle så begrunner jeg at det skal være i senter  */
+            align-items: center;        /* Justerer innholdet hvor det sentereres vertiklat */
         }
     </style>
 </head>
 <body>
-    <div class="box">
-        <div class="inner">
-            <h3>A heading</h3>
-            <p>Some text!</p>
+    <div class="box">               <!-- Dette er den ytre boksen -->
+        <div class="inner">         <!-- Dette er den indre boksen, som er det faktiske innholdet -->
+            <h3>A heading</h3>      <!-- h3: er en overskrift -->
+            <p>Some text!</p>       <!-- p: er et vanlig avsnitt med tekst -->
         </div>
     </div>
 </body>

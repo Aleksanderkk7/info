@@ -1,21 +1,34 @@
+<!-- Startfil
+
+Gi siden og artiklene en bakgrunnsfarge.
+Sett dimensjonene på artiklene til 400 × 200 px.
+Bruk flexbox for å vise artiklene ved siden av hverandre med 10 px avstand.
+Sørg for at artiklene brytes ned på en ny linje når det ikke er plass.
+Sørg for at artiklene kan vokse slik at de fyller hele bredden.
+
+!Exercise4 with large screen size
+!Exercise4 with small screen size -->
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Exercise #4: Flexible articles</title>
     <style>
         body {
-            background-color: #cccccc;
+            background-color: gray;
             display: flex;
             flex-wrap: wrap;
+            gap: 10px;
         }
 
         article {
             width: 400px;
             height: 200px;
             margin: 5px;
-            background-color: #eaeaed;
+            background-color: white;
             overflow: scroll;
             text-align: center;
+            flex-grow: 1;
             
 
         }

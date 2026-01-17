@@ -1,13 +1,23 @@
+<!-- #2c) Startfil
+Få <div>‑elementet med id banner til å vises øverst i høyre hjørne av siden, 
+    20 px fra topp og høyre kant av vinduet. Sett størrelsen på boksen til 120×480 og legg på en 1 px solid ramme rundt den. 
+    Vis bildet images/banner_120x480.gif ved å sette det som bakgrunnsbilde på <div>‑en. 
+        Banneret skal holde seg på samme plass selv når brukeren scroller på siden.
+!Exercise2c -->
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Exercise #2c: Positioning</title>
     <style>
-        #banner {
-            width: 120px;
-            height: 480px;
-            border: 1px solid black;
-            background: url("images/banner_120x480.gif");
+        #banner { /* Dette gjelder bare elemtet/bilde, og hva som skal gjøres med det */
+            width: 120px; /* Bredde */
+            height: 480px; /* Høyde */
+            border: 1px solid black; /* Kant rundt bilde med tykkelse*/
+            background: url("images/banner_120x480.gif"); /* Linken til selve bilde */
+            position: fixed; /* Bilde blir låst til possition mens det scrolles */
+            top: 220px; /* Plasserer elementet/bilde ned x-pixler fra toppen av skjermen */
+            right: 120px; /* Plasserer elemtet/bilde til høyre ut fra veggen */
         }
         /* add CSS here */
     </style>
