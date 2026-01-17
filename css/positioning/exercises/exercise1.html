@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="no"> <!-- Bytter til at html skal være norsk språk -->
+<head>
+    <meta charset="utf-8"/>
+    <title>Listeøvelse</title> <!-- Dette er titelen i baren vinduet-->
+    <style>
+        #tall-liste { /* Målet her er å flytte listen helt til venstre og fjerne punktene (svarte kulene) */
+            padding-left: 0; /* Flytter listen til ventre */
+            margin: Item; /* Litt luft rundt  */
+            list-style: none; /* Dette fjerner punktene */
+        }
+
+        /* Her legges hver verdi i en liten blå boks */
+        #tall-liste li { /* Spesifiserer hvert li element */
+            display: inline-block; /* Får item(tallene) til å legge seg ved siden av hverandre */
+            width: 3em; /* Bredde */
+            text-align: center; /* Senterer tallene */
+            border: 1px solid#888; /* Kantlinjer */
+            background-color: #eef6ff; /* Lys bakgrunnsfarge */
+            margin: 0.25em; /* Luft mellom boksene */
+            padding : 0.5em 0; /* vertikal padding for høyde */
+            border-radius: 0.25em; /* Avrundet hjørner */
+            font-family: system-ui, sans-serif; /* Litt penere font */
+        }
+
+        /* Dette skjuler oddetallen helt (de forsvinner ikke, men de er gjømt) */
+        #tall-liste li:nth-child(odd) {
+            display: none;
+        }
+
+        /* Dette skjuler primtallene */
+        #nr2, #nr3, #nr5 , #nr7 {
+            visibility: hidden;
+        }
+    </style>    
+
+</head>
+
+<body> <!-- Dette er starten på sideinnholde, alt som vises i nettleseren/nettsiden -->
+    <ul id="tall-liste"> <!-- Dette er en uordnet liste, hvor "id="tall-liste" er et unikt navn på siden-->
+        <li id="nr1">1</li>
+        <li id="nr2">2</li>
+        <li id="nr3">3</li> <!-- "il = list item (et element i listen)" -->
+        <li id="nr4">4</li> <!-- id="Item gir hver lsite en id -->
+        <li id="nr5">5</li>
+        <li id="nr6">6</li>
+        <li id="nr7">7</li>
+        <li id="nr8">8</li>
+        <li id="nr9">9</li>
+        <li id="nr10">10</li>
+    </ul>
+</body>
+</html>

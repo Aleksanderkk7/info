@@ -1,3 +1,6 @@
+<!-- #2b) Startfil
+Bruk absolutt posisjonering for å plassere elementene left og right på venstre og høyre side av containeren. -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +20,7 @@
         #container {
             height: 100%;
             border: 2px solid black;
-            position: relative;
+            position: relative; /* Gjør containeren til et referansepunkt */
             /* add css here */
         }
         #left {
@@ -29,6 +32,8 @@
             right: 0;
             /* add css here */
         }
+        /* Siden Lef og Right har absolutt er på grunn av:
+        det lar elementene plasseres eksakt der du vil inni containeren */
 
         #right {
             background: #ff9c34;
