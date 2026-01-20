@@ -1,5 +1,10 @@
 # HTML resources
 
+## Resources for html forms
+* [Examples](forms/examples)
+* [Exercises](forms/exercises)
+* [Solutions](forms/solutions)
+
 ### Resources available here:
 * [Examples](examples)
 * [Exercises](exercises)
