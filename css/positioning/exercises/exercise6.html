@@ -11,32 +11,52 @@
         background-color: #ffffcc;
       }
 
+      #wrapper {
+        width: 80px;
+        margin: auto;
+        min-width: 600;
+        max-width: 960px;
+        background-color: #e3e3e3;
+        position: relative;
+      }
+
       header {
         background-color: #ebde52;
         height: 80px;
       }
 
       nav {
-        width: 20%;
+        width: 200%;
+        position: absolute;
+        right: 0px;
         padding-top: 20px;
-        background-color: #e3e3e3;
       }
 
       main {
-        position: absolute;
-        top: 80px; /* same as the height of header */
-        left: 20%; /* same as the width of nav */
-        width: 80%;
         padding-top: 20px;
+        margin-right: 100px;
         background-color: #ffffff;
       }
 
       p {
         margin: 1em;
       }
+
+      footer {
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
+        height: 30px;
+        background-color: #696969;
+        color: white;
+        text-align: center;
+      }
+
     </style>
   </head>
   <body>
+    <div id="wrapper">
     <header>
       <h1>2-column layout</h1>
     </header>
@@ -103,5 +123,7 @@
         tincidunt.
       </p>
     </main>
+    </div>
+    <footer>Accept our cookie policsy.</footer>
   </body>
 </html>
