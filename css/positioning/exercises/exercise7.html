@@ -53,6 +53,24 @@
             color: white;
             text-align: center;
         }
+        
+        @media (max-width:800px) {  /* "Hvis skjermen er 800px bred eller mindre,
+        bruk disse CCS-reglene".
+        Dette er respnsivt design slik at siden tilpasser seg små skjermer */
+            .flex {     /* Gjelder for alle elementer med class flex */
+                flex-wrap: wrap; /* Hvis det ikker er nokk plass på en linje.
+                bryt elemente ned på neste linje i stedet for å presse dem sammen.
+                Brukes for at ting ikke skal bli for range på små skjermer */
+            }
+            #wrapper {
+                width: initial; /* Nullstiller bredden til default verdi.
+                På liten skjerm vil wrapperen ikke lenger være "80% bred maks 960px".
+                Dette gjør at wrapperen blir automatisk bredest mulig så den passer små skjermer*/
+                margin: 0px 10px; /* Gir 10px margin på venstre og høyre side.
+                Innholdet får litt luft på små skjermer.
+                Det unngår at teksten går helt ut i kantene */
+            }
+        }
 
     </style>
 </head>
