@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Top movies</title>
+    <style>
+        .even {
+            background-color: #ECECEC;
+        }
+        .odd {
+            background-color: #CCCCCC;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <thead>
+    <tr>
+        <th>Rank</th>
+        <th>Title</th>
+        <th>Year</th>
+        <th>Rating</th>
+        <th>About</th>
+    </tr>
+    </thead>
+    <tbody>
+        {# TODO: Use filters to sort movies, truncate synopsis and show the url. #}
+        {# TODO: Add classes 'odd' and 'even' to the rows #}
+        {% for movie in movies %}
+        <tr class="even">
+            <td>{{ loop.index }}</td>
+            <td> {{ movie.title }} </td>
+            <td> {{ movie.year }} </td>
+            <td> {{ movie.rating }} </td>
+            <td> {{ movie.synopsis  }} <br>
+                    {{ movie.url }}
+            </td>
+        </tr>
+        {% endfor %}
+        
+    </tbody>
+</table>
+
+</body>
+</html>
